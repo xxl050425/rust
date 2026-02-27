@@ -1,0 +1,13 @@
+[package]
+name = "blockchain_challenge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = "0.10"
+# 适配 secp256k1 0.27 版本的特性（移除不支持的 ecdsa/alloc，替换为 recovery）
+secp256k1 = { version = "0.27", features = ["std", "recovery", "serde"] }
+hex = "0.4"
+tar = "0.4"
+thiserror = "1.0"
+anyhow = "1.0"
